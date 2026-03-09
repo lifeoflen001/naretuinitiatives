@@ -1,0 +1,659 @@
+/*  IMPORT GOOGLE FONT START */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Poppins&display=swap');
+
+/*  IMPORT GOOGLE FONT END */
+
+/*  COMMON STYLE START */
+:root {
+    --gradientone: #09cc7f;
+    --gradienttwo: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.3px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, var(--gradientone) 0%, var(--gradienttwo) 100%);
+    color: white;
+    min-height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px 20px;
+    width: 100%;
+}
+/*  COMMON STYLE END */
+
+/* WAVES ANIMATION STYLE START  */
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/* WAVES ANIMATION STYLE END  */
+
+/*  CIRCLE ANIMATION STYLE START */
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+.circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+.circles li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+.circles li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+.circles li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+.circles li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 20%;
+    }
+}
+/*  CIRCLE ANIMATION STYLE END */
+
+/*  COUNTDOWN STYLE START */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.countdown>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.25);
+    width: 115px;
+    height: 115px;
+    border-radius: 0px 15px 0px 15px;
+    background: rgba(255, 255, 255, 0.38);
+    border: 1px solid rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.number {
+    font-weight: 500;
+    font-size: 45px;
+    color: white;
+    line-height: 1;
+}
+
+div span:last-of-type {
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.flexCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.h1 {
+    font-size: clamp(32px, 8vw, 60px);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: clamp(4px, 2vw, 8px);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Subscribe Form */
+#subscribe {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#subscribe form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+}
+
+#subscribe input[type="text"],
+#subscribe input[type="email"] {
+    color: black;
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid var(--gradienttwo);
+    padding: 0 15px;
+    height: 50px;
+    text-align: left;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    border-radius: 0;
+    outline: none;
+}
+
+#subscribe input[type="button"],
+#subscribe button {
+    background: linear-gradient(60deg, var(--gradientone) 0%, var(--gradienttwo) 100%);
+    width: auto;
+    padding: 0 30px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    display: inline-block;
+    color: white;
+    border: 1px solid var(--gradienttwo);
+    border-left: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#subscribe input[type="button"]:hover,
+#subscribe button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+input[type='color'] {
+    padding: 0;
+    width: 150%;
+    height: 150%;
+    margin: -25%;
+    display: none;
+}
+/*  COUNTDOWN STYLE END */
+
+/*  COLOR PICKER STYLE START */
+.cp_wrapper {
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.color_picker {
+    position: fixed;
+    z-index: 1000;
+    left: 20px;
+    bottom: 20px;
+    top: auto;
+}
+
+.color_picker_image {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+/*  COLOR PICKER STYLE END */
+
+/* SETTINGS START */
+.settings_div {
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    top: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    max-width: 250px;
+}
+
+.settings_div div {
+    padding: 8px 0;
+}
+
+.settings_div label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.settings_div input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+/* SETTING END */
+
+/* Floating Back Button Styles */
+.floating-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid black;
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: float 2s ease-in-out infinite, slideIn 0.5s ease-out;
+}
+
+.floating-back-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.floating-back-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.floating-back-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.floating-back-btn:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Pulse Animation on Load */
+.floating-back-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE BREAKPOINTS
+=================================*/
+
+/* Large Tablets */
+@media (max-width: 992px) {
+    .h1 {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+
+    .countdown>div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .number {
+        font-size: 36px;
+    }
+
+    .settings_div {
+        right: 10px;
+        top: 70px;
+        max-width: 200px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header {
+        min-height: auto;
+        padding: 100px 15px 120px;
+    }
+
+    .inner-header {
+        padding: 60px 15px 30px;
+    }
+
+    .h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+        line-height: 1.3;
+    }
+
+    .countdown {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .countdown>div {
+        width: 85px;
+        height: 85px;
+        border-radius: 0px 12px 0px 12px;
+    }
+
+    .number {
+        font-size: 28px;
+    }
+
+    div span:last-of-type {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-top: 5px;
+    }
+
+    .content {
+        padding: 30px 15px;
+    }
+
+    .content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    #subscribe {
+        padding: 15px;
+    }
+
+    #subscribe form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #subscribe input[type="text"],
+    #subscribe input[type="email"] {
+        width: 100%;
+        border-radius: 25px;
+        text-align: center;
+        height: 45px;
+    }
+
+    #subscribe input[type="button"],
+    #subscribe button {
+        width: 100%;
+        border-radius: 25px;
+        border-left: 1px solid var(--gradienttwo);
+        height: 45px;
+    }
+
+    .color_picker {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .cp_wrapper,
+    .color_picker_image {
+        height: 40px;
+        width: 40px;
+    }
+
+    .settings_div {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .floating-back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 12px;
+        border-width: 1px;
+    }
+
+    .floating-back-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .waves {
+        height: 10vh;
+        min-height: 60px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 80px 10px 100px;
+    }
+
+    .inner-header {
+        padding: 50px 10px 20px;
+    }
+
+    .h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown>div {
+        width: 70px;
+        height: 70px;
+        border-radius: 0px 10px 0px 10px;
+    }
+
+    .number {
+        font-size: 24px;
+    }
+
+    div span:last-of-type {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .circles li:nth-child(7),
+    .circles li:nth-child(10) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .h1 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .countdown>div {
+        width: 65px;
+        height: 65px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+}
+
+/* Fix for very short screens */
+@media (max-height: 700px) {
+    .header {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .inner-header {
+        height: auto;
+    }
+}
