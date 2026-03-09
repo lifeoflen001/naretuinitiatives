@@ -1,0 +1,295 @@
+@extends('layouts.main')
+
+@section('title', 'Give them Education - Naretu Initiatives')
+
+@section('content')
+    @include('partials.header')
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url({{ asset('assets/images/backgrounds/page-header-bg.jpg') }})">
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <h2>Give them Education</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="{{ route('donations.index') }}">Donations</a></li>
+                    <li><span>/</span></li>
+                    <li>Give them Education</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Donations Details Start-->
+    <section class="donations-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="donation-details__left">
+                        <div class="donation-details__top">
+                            <div class="donation-details__top-img">
+                                <img src="{{ asset('assets/images/resources/donation-details-img-1.jpg') }}" alt="Education Fundraising">
+                                <div class="donation-details__category">
+                                    <span>Education</span>
+                                </div>
+                            </div>
+                            <div class="donation-details__top-progress-box clearfix">
+                                <div class="donation-details__progress">
+                                    <div class="bar">
+                                        <div class="bar-inner count-bar" data-percent="36%">
+                                            <div class="count-text">36%</div>
+                                        </div>
+                                    </div>
+                                    <div class="donation-details__goals">
+                                        <p><span>$25,270</span> Raised</p>
+                                        <p><span>$30,000</span> Goal</p>
+                                    </div>
+                                </div>
+                                <div class="donation-details__top-donate-btn-box">
+                                    <a href="{{ route('about') }}" class="donate-btn footer-donate__btn">
+                                        <i class="fa fa-heart"></i> Donate Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="donation-details__content">
+                            <h3 class="donation-details__title">Raise Fund for Children's Education</h3>
+                            <p class="donation-details__text-1">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim
+                                exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but
+                                the majority have alteration in some injected or words which don't look even
+                                slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+                                be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem
+                                Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                                making this the first true generator on the Internet. It uses a dictionary of over
+                                200 Latin words, combined with a handful of model sentence structures, to generate
+                                Lorem Ipsum which looks reasonable.</p>
+                            
+                            <h3 class="donation-details__title">Summary</h3>
+                            <p class="donation-details__text-2">Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.</p>
+                            
+                            <ul class="list-unstyled donation-details__points">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-confirmation"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Consectetur cing do not elit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-confirmation"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Suspendisse suscipit sagittis in leo.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-confirmation"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Ante estibulum dignissim posuere.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="donation-details__content-img-boxes">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="donation-details__content-img-single">
+                                            <img src="{{ asset('assets/images/resources/donation-details-content-img-1.jpg') }}" alt="Education activity">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="donation-details__content-img-single">
+                                            <img src="{{ asset('assets/images/resources/donation-details-content-img-2.jpg') }}" alt="Children learning">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="donation-details__text-3">Lorem Ipsum has been the industry's standard dummy
+                                text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.</p>
+                            
+                            <div class="donation-details__presentation">
+                                <div class="donation-details__presentation-icon-box">
+                                    <span class="icon-pdf"></span>
+                                    <h4>Our Presentation</h4>
+                                </div>
+                                <div class="donation-details__presentation-btn-box">
+                                    <a href="{{ route('about') }}" class="thm-btn donation-details__presentation-btn">Download</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comments Section -->
+                        <div class="comment-one">
+                            <h3 class="comment-one__title">2 Comments</h3>
+                            
+                            <div class="comment-one__single">
+                                <div class="comment-one__image">
+                                    <img src="{{ asset('assets/images/blog/comment-1-1.jpg') }}" alt="Kevin Martin">
+                                </div>
+                                <div class="comment-one__content">
+                                    <h3>Kevin Martin</h3>
+                                    <p>It has survived not only five centuries, but also the leap into electronic
+                                        typesetting unchanged. It was popularised in the sheets containing lorem
+                                        ipsum is simply free text.</p>
+                                    <a href="{{ route('blog.show', 1) }}" class="thm-btn comment-one__btn">Reply</a>
+                                </div>
+                            </div>
+                            
+                            <div class="comment-one__single">
+                                <div class="comment-one__image">
+                                    <img src="{{ asset('assets/images/blog/comment-1-2.jpg') }}" alt="Sarah Albert">
+                                </div>
+                                <div class="comment-one__content">
+                                    <h3>Sarah Albert</h3>
+                                    <p>It has survived not only five centuries, but also the leap into electronic
+                                        typesetting unchanged. It was popularised in the sheets containing lorem
+                                        ipsum is simply free text.</p>
+                                    <a href="{{ route('blog.show', 2) }}" class="thm-btn comment-one__btn">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment Form -->
+                        <div class="comment-form">
+                            <h3 class="comment-form__title">Leave a Comment</h3>
+                            <form action="{{ route('comments.store') }}" method="POST" class="comment-one__form contact-form-validated" novalidate>
+                                @csrf
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Your Name" name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="email" placeholder="Email Address" name="email" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="comment-form__input-box text-message-box">
+                                            <textarea name="message" placeholder="Write a Comment" required></textarea>
+                                        </div>
+                                        <div class="comment-form__btn-box">
+                                            <button type="submit" class="thm-btn comment-form__btn">Submit Comment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-5">
+                    <div class="donation-details__sidebar">
+                        <!-- Organizer -->
+                        <div class="donation-details__sidebar-single donation-details__organizer">
+                            <div class="donation-details__organizer-img">
+                                <img src="{{ asset('assets/images/resources/donation-details-organizer-img.jpg') }}" alt="Jessica Smith">
+                            </div>
+                            <div class="donation-details__organizer-content">
+                                <p class="donation-details__organizer-date">Created 20 Oct, 2021</p>
+                                <p class="donation-details__organizer-title">Organizer:</p>
+                                <p class="donation-details__organizer-name">Jessica Smith</p>
+                                <ul class="list-unstyled donation-details__organizer-list">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fas fa-tag"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Education</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fas fa-map-marker-alt"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Westwood, Canada</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Recent Donations -->
+                        <div class="donation-details__sidebar-single donation-details__recent-donation">
+                            <h3 class="donation-details__recent-donation-title">Recent Donation</h3>
+                            <ul class="list-unstyled donation-details__recent-donation-list">
+                                <li>
+                                    <div class="donation-details__recent-donation-img">
+                                        <img src="{{ asset('assets/images/resources/donation-details-recent-donation-img-1.jpg') }}" alt="David Marks">
+                                    </div>
+                                    <div class="donation-details__recent-donation-content">
+                                        <h4 class="donation-details__recent-donation-amount">$20</h4>
+                                        <p class="donation-details__recent-donation-name">David Marks <span>3 hours ago</span></p>
+                                        <p class="donation-details__recent-donation-text">God bless you dear</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="donation-details__recent-donation-img">
+                                        <img src="{{ asset('assets/images/resources/donation-details-recent-donation-img-2.jpg') }}" alt="Sarah Albert">
+                                    </div>
+                                    <div class="donation-details__recent-donation-content">
+                                        <h4 class="donation-details__recent-donation-amount">$35</h4>
+                                        <p class="donation-details__recent-donation-name">Sarah Albert <span>10 hours ago</span></p>
+                                        <p class="donation-details__recent-donation-text">My prayers are with you</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="donation-details__recent-donation-img">
+                                        <img src="{{ asset('assets/images/resources/donation-details-recent-donation-img-3.jpg') }}" alt="Anonymous">
+                                    </div>
+                                    <div class="donation-details__recent-donation-content">
+                                        <h4 class="donation-details__recent-donation-amount">$50</h4>
+                                        <p class="donation-details__recent-donation-name">Anonymous <span>20 hours ago</span></p>
+                                        <p class="donation-details__recent-donation-text">My prayers are with you</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="donation-details__recent-donation-img">
+                                        <img src="{{ asset('assets/images/resources/donation-details-recent-donation-img-4.jpg') }}" alt="Kistin Eve">
+                                    </div>
+                                    <div class="donation-details__recent-donation-content">
+                                        <h4 class="donation-details__recent-donation-amount">$80</h4>
+                                        <p class="donation-details__recent-donation-name">Kistin Eve <span>2 Days ago</span></p>
+                                        <p class="donation-details__recent-donation-text">Wishing you blessings</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Share Cause -->
+                        <div class="donation-details__sidebar-single donation-details__sidebar-share-cause">
+                            <h3 class="donation-details__recent-donation-title">Share Cause</h3>
+                            <div class="donation-details__sidebar-share-cause-social">
+                                <a href="https://twitter.com/share?url={{ urlencode(request()->fullUrl()) }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://pinterest.com/pin/create/button/?url={{ urlencode(request()->fullUrl()) }}" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Donations Details End-->
+
+    @include('partials.footer')
+@endsection
